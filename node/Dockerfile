@@ -11,7 +11,3 @@ EXPOSE 30303
 
 # bootnode
 EXPOSE 30301/udp
-
-# swarm
-EXPOSE 8500
-EXPOSE 30399

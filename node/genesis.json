@@ -1,9 +1,15 @@
 {
   "config": {
-    "chainId": 2833,
+    "chainId": 8756,
     "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "eip155Block": 0,
     "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0,
     "clique": {
       "period": 5,
       "epoch": 30000
@@ -17,6 +23,27 @@
       "balance": "10000000000000000000"
     },
     "63acc2564bd456d6dfedeabf2186acbac4b04d15": {
+      "balance": "10000000000000000000"
+    },
+    "16bbbc69de40f44495c7f814a6d8c1d5daad190d": {
+      "balance": "10000000000000000000"
+    },
+    "90f8bf6a479f320ead074411a4b0e7944ea8c9c1": {
+      "balance": "10000000000000000000"
+    },
+    "ffcf8fdee72ac11b5c542428b35eef5769c409f0": {
+      "balance": "10000000000000000000"
+    },
+    "95ced938f7991cd0dfcb48f0a06a40fa1af46ebc": {
+      "balance": "10000000000000000000"
+    },
+    "22d491bde2303f2f43325b2108d26f1eaba1e32b": {
+      "balance": "10000000000000000000"
+    },
+    "3e5e9111ae8eb78fe1cc3bb8915d5d461f3ef9a9": {
+      "balance": "10000000000000000000"
+    },
+    "28a8746e75304c0780e011bed21c72cd78cd535e": {
       "balance": "10000000000000000000"
     }
   }

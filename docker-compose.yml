@@ -21,12 +21,12 @@ services:
     networks:
       research:
         ipv4_address: 172.3.0.111
-  node:
+  node-1:
     depends_on:
       - bootnode
     build:
       context: node
-    container_name: node
+    container_name: node-1
     ports:
       - 8545:8545
     command: geth
@@ -34,7 +34,24 @@ services:
       --bootnodes enode://${BOOTNODE_ID}@172.3.0.111:30301
       --networkid ${NETWORK_ID}
       --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "eth,web3,net,admin,db"
-      --ethstats node:${NETSTATS_SECRET}@netstats:3000
+      --unlock "${TEST_ACCOUNTS}" --password password.txt
+      --ethstats node-1:${NETSTATS_SECRET}@netstats:3000
+    networks:
+      - research
+  node-2:
+    depends_on:
+      - bootnode
+    build:
+      context: node
+    container_name: node-2
+    ports:
+      - 8546:8545
+    command: geth
+      --syncmode full
+      --bootnodes enode://${BOOTNODE_ID}@172.3.0.111:30301
+      --networkid ${NETWORK_ID}
+      --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "eth,web3,net,admin,db"
+      --ethstats node-2:${NETSTATS_SECRET}@netstats:3000
     networks:
       - research
   node-miner-1:
@@ -45,13 +62,13 @@ services:
       context: node
     container_name: node-miner-1
     ports:
-      - 8546:8545
+      - 8547:8545
     command: geth
       --syncmode full
       --bootnodes enode://${BOOTNODE_ID}@172.3.0.111:30301
       --networkid ${NETWORK_ID}
       --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "eth,web3,net,admin,db,miner"
-      --mine --miner.etherbase ${ACCOUNT_1}
+      --mine --miner.etherbase ${ACCOUNT_1} 
       --unlock ${ACCOUNT_1} --password password.txt
       --ethstats node-miner-1:${NETSTATS_SECRET}@netstats:3000
     networks:
@@ -64,48 +81,37 @@ services:
       context: node
     container_name: node-miner-2
     ports:
-      - 8547:8545
+      - 8548:8545
     command: geth
       --syncmode full
       --bootnodes enode://${BOOTNODE_ID}@172.3.0.111:30301
       --networkid ${NETWORK_ID}
       --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "eth,web3,net,admin,db,miner"
-      --mine --miner.etherbase ${ACCOUNT_2}
+      --mine --miner.etherbase ${ACCOUNT_2} 
       --unlock ${ACCOUNT_2} --password password.txt
       --ethstats node-miner-2:${NETSTATS_SECRET}@netstats:3000
     networks:
       - research
+  node-miner-3:
+    depends_on:
+      - bootnode
+      - netstats
+    build:
+      context: node
+    container_name: node-miner-3
+    ports:
+      - 8549:8545
+    command: geth
+      --syncmode full
+      --bootnodes enode://${BOOTNODE_ID}@172.3.0.111:30301
+      --networkid ${NETWORK_ID}
+      --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "eth,web3,net,admin,db,miner"
+      --mine --miner.etherbase ${ACCOUNT_3} 
+      --unlock ${ACCOUNT_3} --password password.txt
+      --ethstats node-miner-3:${NETSTATS_SECRET}@netstats:3000
+    networks:
+      - research
 
-  node-swarm-1:
-    depends_on:
-      - bootnode
-    ports:
-      - 8500:8500
-    command: swarm
-      --bootnodes enode://${BOOTNODE_ID}@172.3.0.111:30301
-      --bzzapi 0.0.0.0 --corsdomain "*" --httpaddr 0.0.0.0
-      --bzzaccount ${ACCOUNT_1} --password password.txt
-      --bzznetworkid ${NETWORK_ID}
-    build:
-      context: node
-    container_name: node-swarm-1
-    networks:
-      - research
-  node-swarm-2:
-    depends_on:
-      - bootnode
-    ports:
-      - 8501:8500
-    command: swarm
-      --bootnodes enode://${BOOTNODE_ID}@172.3.0.111:30301
-      --bzzapi 0.0.0.0 --corsdomain "*" --httpaddr 0.0.0.0
-      --bzzaccount ${ACCOUNT_2} --password password.txt
-      --bzznetworkid ${NETWORK_ID}
-    build:
-      context: node
-    container_name: node-swarm-2
-    networks:
-      - research
 networks:
   research:
     driver: bridge
