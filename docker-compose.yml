@@ -33,8 +33,10 @@ services:
       --syncmode full
       --bootnodes enode://${BOOTNODE_ID}@172.3.0.111:30301
       --networkid ${NETWORK_ID}
-      --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "eth,web3,net,admin,db"
-      --unlock "${TEST_ACCOUNTS}" --password password.txt
+      --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "personal,eth,web3,net,admin,db"
+      --ws --wsaddr="0.0.0.0" --wsorigins="*" --wsapi="personal,eth,net,web3"
+      --miner.gasprice 0
+      --unlock ${ACCOUNT_0} --password password.txt
       --ethstats node-1:${NETSTATS_SECRET}@netstats:3000
     networks:
       - research
@@ -50,7 +52,9 @@ services:
       --syncmode full
       --bootnodes enode://${BOOTNODE_ID}@172.3.0.111:30301
       --networkid ${NETWORK_ID}
-      --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "eth,web3,net,admin,db"
+      --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "personal,eth,web3,net,admin,db"
+      --ws --wsaddr="0.0.0.0" --wsorigins="*" --wsapi="personal,eth,net,web3"
+      --miner.gasprice 0
       --ethstats node-2:${NETSTATS_SECRET}@netstats:3000
     networks:
       - research
@@ -68,7 +72,7 @@ services:
       --bootnodes enode://${BOOTNODE_ID}@172.3.0.111:30301
       --networkid ${NETWORK_ID}
       --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "eth,web3,net,admin,db,miner"
-      --mine --miner.etherbase ${ACCOUNT_1} 
+      --mine --miner.etherbase ${ACCOUNT_1} --miner.gasprice 0
       --unlock ${ACCOUNT_1} --password password.txt
       --ethstats node-miner-1:${NETSTATS_SECRET}@netstats:3000
     networks:
@@ -87,7 +91,7 @@ services:
       --bootnodes enode://${BOOTNODE_ID}@172.3.0.111:30301
       --networkid ${NETWORK_ID}
       --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "eth,web3,net,admin,db,miner"
-      --mine --miner.etherbase ${ACCOUNT_2} 
+      --mine --miner.etherbase ${ACCOUNT_2} --miner.gasprice 0
       --unlock ${ACCOUNT_2} --password password.txt
       --ethstats node-miner-2:${NETSTATS_SECRET}@netstats:3000
     networks:
@@ -106,7 +110,7 @@ services:
       --bootnodes enode://${BOOTNODE_ID}@172.3.0.111:30301
       --networkid ${NETWORK_ID}
       --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "eth,web3,net,admin,db,miner"
-      --mine --miner.etherbase ${ACCOUNT_3} 
+      --mine --miner.etherbase ${ACCOUNT_3} --miner.gasprice 0
       --unlock ${ACCOUNT_3} --password password.txt
       --ethstats node-miner-3:${NETSTATS_SECRET}@netstats:3000
     networks:
