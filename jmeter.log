@@ -1,0 +1,64 @@
+2022-03-29 13:55:26,228 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2022-03-29 13:55:26,264 INFO o.a.j.JMeter: Loading user properties from: /usr/local/Cellar/jmeter/5.4.3/libexec/bin/user.properties
+2022-03-29 13:55:26,265 INFO o.a.j.JMeter: Loading system properties from: /usr/local/Cellar/jmeter/5.4.3/libexec/bin/system.properties
+2022-03-29 13:55:26,274 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2022-03-29 13:55:26,275 INFO o.a.j.JMeter: Version 5.4.3
+2022-03-29 13:55:26,275 INFO o.a.j.JMeter: java.version=17.0.2
+2022-03-29 13:55:26,275 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2022-03-29 13:55:26,275 INFO o.a.j.JMeter: os.name=Mac OS X
+2022-03-29 13:55:26,275 INFO o.a.j.JMeter: os.arch=x86_64
+2022-03-29 13:55:26,275 INFO o.a.j.JMeter: os.version=12.3
+2022-03-29 13:55:26,275 INFO o.a.j.JMeter: file.encoding=UTF-8
+2022-03-29 13:55:26,275 INFO o.a.j.JMeter: java.awt.headless=null
+2022-03-29 13:55:26,275 INFO o.a.j.JMeter: Max memory     =1073741824
+2022-03-29 13:55:26,276 INFO o.a.j.JMeter: Available Processors =8
+2022-03-29 13:55:26,289 INFO o.a.j.JMeter: Default Locale=English (EN)
+2022-03-29 13:55:26,289 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2022-03-29 13:55:26,290 INFO o.a.j.JMeter: JMeterHome=/usr/local/Cellar/jmeter/5.4.3/libexec
+2022-03-29 13:55:26,290 INFO o.a.j.JMeter: user.dir  =/Users/hc/Documents/Thesis/eth-private-network
+2022-03-29 13:55:26,290 INFO o.a.j.JMeter: PWD       =/Users/hc/Documents/Thesis/eth-private-network
+2022-03-29 13:55:26,302 INFO o.a.j.JMeter: IP: 192.168.50.83 Name: HC FullName: hc
+2022-03-29 13:55:26,861 INFO o.a.j.JMeter: Setting LAF to: laf:com.apple.laf.AquaLookAndFeel
+2022-03-29 13:55:27,861 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2022-03-29 13:55:29,508 INFO o.j.r.JARSourceHTTP: Found cached repo
+2022-03-29 13:55:29,702 INFO o.j.r.PluginManager: Plugins Status: [jpgc-plugins-manager=1.7, jmeter-core=5.4.3, jmeter-ftp=5.4.3, jmeter-http=5.4.3, jmeter-jdbc=5.4.3, jmeter-jms=5.4.3, jmeter-junit=5.4.3, jmeter-java=5.4.3, jmeter-ldap=5.4.3, jmeter-mail=5.4.3, jmeter-mongodb=5.4.3, jmeter-native=5.4.3, jmeter-tcp=5.4.3, jmeter-components=5.4.3]
+2022-03-29 13:55:44,569 INFO o.a.j.s.FileServer: Default base='/Users/hc/Documents/Thesis/eth-private-network'
+2022-03-29 13:55:44,574 INFO o.a.j.g.a.Load: Loading file: /Users/hc/Documents/Thesis/HTTP Request.jmx
+2022-03-29 13:55:44,575 INFO o.a.j.s.FileServer: Set new base='/Users/hc/Documents/Thesis'
+2022-03-29 13:55:44,787 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2022-03-29 13:55:44,796 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2022-03-29 13:55:44,798 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2022-03-29 13:55:44,799 INFO o.a.j.s.SaveService: Loading file: /Users/hc/Documents/Thesis/HTTP Request.jmx
+2022-03-29 13:55:44,989 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-03-29 13:55:44,989 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-03-29 13:55:44,990 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-03-29 13:55:44,990 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-03-29 13:55:44,990 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2022-03-29 13:55:44,990 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2022-03-29 13:55:45,088 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2022-03-29 13:55:45,089 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2022-03-29 13:55:45,089 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2022-03-29 13:55:45,089 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2022-03-29 13:55:45,283 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:55:45,500 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:55:45,563 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:55:45,643 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:55:45,706 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:55:45,790 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:55:45,863 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:55:45,963 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:55:46,025 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:55:46,077 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:55:46,133 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:55:46,191 INFO o.a.j.s.FileServer: Set new base='/Users/hc/Documents/Thesis'
+2022-03-29 13:57:47,126 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:57:52,661 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:57:56,774 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:58:00,168 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:58:04,083 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:58:07,572 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:58:11,681 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:58:16,510 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:58:20,671 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:58:23,445 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-03-29 13:58:26,817 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser

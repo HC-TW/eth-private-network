@@ -36,7 +36,7 @@ services:
       --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "personal,eth,web3,net,admin,db"
       --ws --wsaddr="0.0.0.0" --wsorigins="*" --wsapi="personal,eth,net,web3"
       --miner.gasprice 0
-      --unlock ${ACCOUNT_0} --password password.txt
+      --unlock "${ACCOUNT_0}" --password password.txt
       --ethstats node-1:${NETSTATS_SECRET}@netstats:3000
     networks:
       - research
